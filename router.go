@@ -28,8 +28,5 @@ func CollectRouter(r *gin.Engine) *gin.Engine {
 	r.GET("/testWebSocket", func(c *gin.Context) {
 		model.TestWebs(c)
 	})
-	r.GET("/testRedis", func(c *gin.Context) {
-		c.JSON(http.StatusOK, model.TestRedis(c))
-	})
 	return r
 }
